@@ -1,0 +1,44 @@
+<div class="position-absolute top-50 start-50 translate-middle bg-light p-5 rounded shadow-lg"
+    style="width: 500px;">
+    <h1 class="text-center mb-4" style="color: #490752;">Conversor de moedas</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-12 mb-3">
+            <h3 style="color: #C01CFF;">Digite o valor em real</h3>
+            <input class="form-control rounded" id="valor1" type="number" [(ngModel)]="ValorReal" (focus)="removeZero('ValorReal')">
+        </div>
+    
+        <div class="col-md-12 mb-3">
+            <h3 style="color: #C01CFF;">Informe a cotação de dolar</h3>
+            <input class="form-control rounded" id="valordolar" type="number" [(ngModel)]="valordolar" (focus)="removeZero('valordolar')">
+        </div>
+    
+        <div class="col-md-12 mb-3">
+            <h3 style="color: #C01CFF;">Informe a cotação de libra</h3>
+            <input class="form-control rounded" id="valorlibra" type="number" [(ngModel)]="valorlibra" (focus)="removeZero('valorlibra')">
+        </div>
+    
+        <div class="col-md-12 mb-3">
+            <h3 style="color: #C01CFF;">Informe a cotação de euro</h3>
+            <input class="form-control rounded" id="valoreuro" type="number" [(ngModel)]="valoreuro" (focus)="removeZero('valoreuro')">
+        </div>
+    
+    </div>
+    
+    <div class="mt-5 text-center">
+        <button type="button" class="btn btn-warning btn-lg" (click)="operacao()">Converter</button>
+    </div>
+    
+    <div class="mt-5 d-flex justify-content-between">
+        <div class="w-30">
+            <input class="form-control bg-secondary-subtle text-black fst-italic p-2 rounded" id="ResultDolar" [(ngModel)]="ResultDolar" disabled>
+        </div>
+        <div class="w-30 text-center">
+            <input class="form-control bg-secondary-subtle text-black fst-italic p-2 rounded" id="ResultLibra" [(ngModel)]="ResultLibra" disabled>
+        </div>
+        <div class="w-30 text-end">
+            <div class="input-group mb-3">
+                <input class="form-control bg-secondary-subtle text-black fst-italic p-2 rounded" id="ResultEuro" [(ngModel)]="ResultEuro" disabled>
+            </div>
+        </div>
+    </div>
+    
